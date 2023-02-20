@@ -9,8 +9,6 @@ console.log("1. VARIABLES");
 
 // b.	Comenta el código que muestra el cuadro de diálogo
 
-
-
 // c.	Crear variable tipo let de nombre variableSinValor declarada sin valor
 let variableSinValor;
 
@@ -37,11 +35,10 @@ console.log(miNumeroFav);
 
 // i.	Crea una variable de tipo booleano
 const boolVariable = false;
-console.log(boolVariable);
+console.log(typeof boolVariable);
 
 // j.	Muestra por consola la longitud de la variable miNombre
 console.log(miNombre.length);
-
 
 // k.	Muestra por consola el tipo de dato de la variable miNumeroFav
 console.log(typeof miNumeroFav);
@@ -67,10 +64,8 @@ console.log(typeof miString);
  console.log(diaHoy);
  
 // q.	Muestra por consola la variable PI hasta los 2 primeros decimales
-
 let piCorto = Math.round(PI * 100) / 100;
 console.log(piCorto);
-
 
 // 2.Arrays
 console.log();
@@ -84,52 +79,43 @@ console.log(arrayVacio);
 const arrayNumeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 console.log(arrayNumeros);
 
-
 // c.	Crear variable de nombre arrayNumeros2 declarada con un array de números del 0 al 15 (0, 1, 2...)
-const arrayNumeros2 = arrayNumeros;
-arrayNumeros2[arrayNumeros2.length] = 10, 11, 12, 13, 14, 15;
+const arrayNumeros2 = arrayNumeros.concat(10, 11, 12, 13, 14, 15);
 console.log(arrayNumeros2);
 
 // // d.	Crear variable de nombre arrayNumerosPares declarada con un array con los números pares del 0 al 9 (considerando al 0 par)
-const arrayNumerosPares = [0, 2, 4, 6, 8];
+const arrayNumerosPares = [arrayNumeros[0], arrayNumeros[2], arrayNumeros[4],arrayNumeros[6], arrayNumeros[8]];
 console.log(arrayNumerosPares);
 
 // e.	Crear variable de nombre arrayNumerosNeg declarada con un array de números del 0 al -9 (0, -1, -2...)
 let arrayNumerosNeg = [0, -1, -2, -3, -4, -5, -6, -7, -8, -9];
 console.log(arrayNumerosNeg);
+console.log("Problem! No sé como hacer lo de arriba utilizando arrayNumeros como punto de partida");
 
 // f.	Crear variable de nombre holaMundo declarada con valor array con las palabras 'Hola' y 'Mundo'
 const holaMundo = ["Hola", "Mundo"];
-
 console.log(holaMundo);
-
 
 // g.	Crear variable de nombre loGuardoTodo declarada con valor array con valores 'hola', 'que', 23, 42.33 y 'tal'
 loGuardoTodo = ["hola", "que", 23, 42.33, "tal"];
 console.log(loGuardoTodo);
 
 
-
 // h.	Crear variable de nombre arrayDeArrays declarada con valor array: [[756, 'nombre'], [225, 'apellido'], [298, 'direccion']]
 const arrayDeArrays = [[756, "Kat"], [225, "Bat"], [298, "Calle perdida"]];
-
 console.log(arrayDeArrays);
 
 // i.	Muestra por consola la longitud del array “loGuardoTodo”
-
 console.log(loGuardoTodo.length);
 
 // j.	Crea un nuevo elemento y añadelo al final del array “loGuardoTodo” y muestralo por consola
-
 loGuardoTodo.push("?");
 console.log(loGuardoTodo);
 
 // k.	Muestra por consola la propiedad ‘que’ de la variable loGuardoTodo
-
 console.log(loGuardoTodo[1]);
 
 // l.	Añade la propiedad ‘Euralio’ en la array loGuardoTodo y muestrala por consola
-
 loGuardoTodo.splice(5, 0, "Euralio");
 console.log(loGuardoTodo);
 
@@ -157,7 +143,6 @@ const casa = {
     portal: "19",
     piso: "2"
 }
-
 console.log(casa);
 
 // c.	Crea un objeto de nombre FullStackDeveloper que tenga las propiedades: array lenguajes(ej. ‘javascript’,’php’), array proyectos(ej. ‘mi página personal’,etc)
@@ -166,17 +151,15 @@ const fullStackDeveloper = {
     lenguajes: ["js", "html", "css"],
     proyectos: ["rampup", "ejercicios", "carta"],
 }
-
 console.log(fullStackDeveloper);
 
 
 // d.	Crea un objeto de nombre Perro que tenga las propiedades: nombre, raza, color y edad con sus respectivos valores
-
 const perro = {
     nombre: "Roy",
-    raza: "Pastor Aleman",
+    raza: "Pastor Alemán",
     color: "marrón",
-    edad: "8",
+    edad: 8,
 }
 console.log(perro);
 
@@ -192,7 +175,7 @@ console.log(noticia);
 const persona = {
     nombre: "Lola",
     apellidos: "García García",
-    edad: "74"
+    edad: 74
 }
 console.log(persona);
 
@@ -209,10 +192,10 @@ console.log(fullStackDeveloper.lenguajes[0]);
 const portatil = {
     marca: "Asus"
 }
-console.log(portatil);
+console.log(portatil.marca);
 
 // j.	Obtén el valor de la propiedad marca del objeto anteriormente creado (Portatil) con ["marca"] y muestrala por consola
-console.log(portatil.marca);
+console.log(portatil["marca"]);
 
 
 // k.	Crea un objeto de nombre Concierto con una propiedad llamada grupos que es un array, obtén el valor de la propiedad y muestrala por consola
@@ -232,13 +215,10 @@ const led = {
 
 const rgb = Object.values(led);
 console.log(rgb);
-
-
 // La array por consola debería mostrarse así [‘rojo’,’verde’,’azul’]
 
 
 // m.	Crea un objeto de nombre O_Error con la propiedad código, obtén el valor de la propiedad y muestrala por consola
-
 const o_error = {
     codigo: "404"
 }
@@ -246,7 +226,6 @@ console.log(o_error);
 console.log(`Se ha producido error ${o_error.codigo}`);
 
 // n.	Crea un objeto de nombre Grupo con la propiedad integrantes (array),obtén el valor de la propiedad guardándolo en la variable integrantes y muestra por consola a uno de los integrantes
-
 const grupo = {
     integrantes: ["Pete", "Bea", "Jim"],
 }
@@ -266,10 +245,10 @@ console.log(nivelesTinta);
 
 // p.	Crea un objeto de nombre Movil con la propiedad especificaciones obtén el valor de la propiedad con ["especificaciones"] guardándolo en la variable especificaciones y muestrala por consola
 const movil = {
-    especificaciones: ["bluetooth", "cámara",]
+    especificaciones: ["bluetooth", "cámara"]
 }
 
-const especificaciones = movil.especificaciones;
+const especificaciones = movil["especificaciones"];
 console.log(especificaciones);
 
 
@@ -285,7 +264,7 @@ console.log(concierto.grupos);
 // s.	Dado el objeto de nombre Concierto, crea la propiedad fecha, dale un valor y después modifica el valor de la propiedad por el valor new Date() (fecha de hoy, investiga que es new Date y como usarlo), consolea el resultado
 concierto.fecha = "17 Junio";
 console.log(concierto);
-concierto.fecha = new Date("2023-06-20");
+concierto.fecha = new Date();
 console.log(concierto.fecha);
 
 
